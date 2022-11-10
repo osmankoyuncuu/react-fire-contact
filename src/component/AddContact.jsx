@@ -1,5 +1,5 @@
 import { addContactItem, editContact } from "../utils/firebase";
-const AddContact = ({ addContact, setAddContact, edit }) => {
+const AddContact = ({ addContact, setAddContact, edit, setEdit }) => {
   const { name, phone, gender } = addContact;
 
   const handleChange = (e) => {
@@ -7,19 +7,18 @@ const AddContact = ({ addContact, setAddContact, edit }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    edit ? editContact(addContact, setAddContact) : addContactItem(addContact);
+    edit ? editContact(addContact, setEdit) : addContactItem(addContact);
     setAddContact({ name: "", phone: "", gender: "" });
   };
   return (
-    <div className=" bg-white text-center h-full px-3 rounded-md">
+    <div className=" bg-white text-center h-full rounded-md">
       {/*Name*/}
-      <form onSubmit={handleSubmit} className="w-full m-auto">
-        <div className="flex justify-center">
-          <div className="my-3 xl:w-96 relative">
-            <i className="fa-solid fa-user absolute top-6 left-3 text-gray-600" />
-            <input
-              type="text"
-              className="
+      <form onSubmit={handleSubmit} className="w-full m-auto px-6">
+        <div className="flex my-3 relative">
+          <i className="fa-solid fa-user absolute top-6 left-3 text-gray-600" />
+          <input
+            type="text"
+            className="
               form-control
               block
               w-full
@@ -36,21 +35,19 @@ const AddContact = ({ addContact, setAddContact, edit }) => {
               mt-3
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
             "
-              placeholder="Name"
-              name="name"
-              value={name}
-              onChange={handleChange}
-              required
-            />
-          </div>
+            placeholder="Name"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            required
+          />
         </div>
         {/*phone*/}
-        <div className="flex justify-center">
-          <div className="mb-3 xl:w-96 relative">
-            <i className="fa-solid fa-phone absolute top-3 left-3 text-gray-600" />
-            <input
-              type="tel"
-              className="
+        <div className="flex justify-center relative mb-3">
+          <i className="fa-solid fa-phone absolute top-3 left-3 text-gray-600" />
+          <input
+            type="tel"
+            className="
               form-control
               block
               w-full
@@ -66,19 +63,18 @@ const AddContact = ({ addContact, setAddContact, edit }) => {
               ease-in-out
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
             "
-              placeholder="Phone Number"
-              name="phone"
-              value={phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
+            pattern="\d*"
+            placeholder="Phone Number"
+            name="phone"
+            value={phone}
+            onChange={handleChange}
+            required
+          />
         </div>
         {/*Gender*/}
-        <div className="flex justify-center">
-          <div className="mb-3 xl:w-96">
-            <select
-              className="form-select appearance-none block
+        <div className="flex justify-center mb-3">
+          <select
+            className="form-select appearance-none block
               w-full
               pl-8
               py-2
@@ -91,18 +87,17 @@ const AddContact = ({ addContact, setAddContact, edit }) => {
               transition
               ease-in-out
               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              aria-label="Default select example"
-              name="gender"
-              value={gender}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+            aria-label="Default select example"
+            name="gender"
+            value={gender}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
         </div>
         {/*button*/}
         <div className="flex space-x-2 justify-center">
