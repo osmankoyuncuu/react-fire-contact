@@ -33,7 +33,7 @@ const AddContact = ({ addContact, setAddContact, edit, setEdit }) => {
               transition
               ease-in-out
               mt-3
-              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+              focus:text-gray-700 focus:bg-white focus:border-emerald-600 focus:outline-none
             "
             placeholder="Name"
             name="name"
@@ -61,7 +61,7 @@ const AddContact = ({ addContact, setAddContact, edit, setEdit }) => {
               rounded
               transition
               ease-in-out
-              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+              focus:text-gray-700 focus:bg-white focus:border-emerald-600 focus:outline-none
             "
             pattern="\d*"
             placeholder="Phone Number"
@@ -86,7 +86,7 @@ const AddContact = ({ addContact, setAddContact, edit, setEdit }) => {
               rounded
               transition
               ease-in-out
-              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              focus:text-gray-700 focus:bg-white focus:border-emerald-600 focus:outline-none"
             aria-label="Default select example"
             name="gender"
             value={gender}
@@ -105,7 +105,7 @@ const AddContact = ({ addContact, setAddContact, edit, setEdit }) => {
             type="submit"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
-            className="inline-block w-full mt-1 py-2.5 bg-blue-600 text-white font-medium text-md leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
+            className="inline-block w-full mt-1 py-2.5 bg-emerald-600 text-white font-medium text-md leading-tight uppercase rounded shadow-md hover:bg-emerald-700 hover:shadow-lg focus:bg-emerald-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-emerald-800 active:shadow-lg transition duration-150 ease-in-out "
           >
             Add
           </button>

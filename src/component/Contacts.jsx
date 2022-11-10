@@ -52,7 +52,7 @@ const Contacts = ({ setAddContact, contactList, setEdit }) => {
                   return (
                     <tbody key={id}>
                       <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <td className="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
                           {name}
                         </td>
                         <td className="text-base text-gray-900 font-light px-6 py-4 whitespace-nowrap">
