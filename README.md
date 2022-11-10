@@ -1,3 +1,45 @@
+## Check The Live Website ➡️ [Live Website]()
+
+## Animation of the Website
+
+![image](./fire-contact.gif)
+
+## Description
+
+Project aims to create a fire contact.
+
+## Project Skeleton
+
+    react-fire-contact
+    |
+    ├── public
+    │     └── favicon.ico
+    │     └── index.html
+    ├── src
+    │    ├── components
+    │    │       ├── AddContact.jsx
+    │    │       ├── Contact.jsx
+    │    │       ├── Header.jsx
+    │    │       └── Home.jsx
+    │    ├── utils
+    │    │    ├── firebase.js
+    │    │    └── ToastNotify.js
+    │    ├── App.css
+    │    ├── App.js
+    │    ├── index.css
+    │    └── index.js
+    ├── .gitignore
+    ├── fire-contact.gif
+    ├── package.json
+    ├── postcss.config.js
+    ├── README.md
+    ├── tailwind.config.js
+    └── yarn.lock
+
+## Overview
+
+I mastered Js, React, Tailwind CSS and Firebase Store features in this project. You can see the visual representation of the website above.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
